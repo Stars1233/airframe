@@ -24,7 +24,7 @@ val FLUENCY_VERSION                 = "2.7.3"
 val GRPC_VERSION                    = "1.71.0"
 val JMH_VERSION                     = "1.37"
 val JAVAX_ANNOTATION_API_VERSION    = "1.3.2"
-val PARQUET_VERSION                 = "1.15.0"
+val PARQUET_VERSION                 = "1.15.1"
 val SNAKE_YAML_VERSION              = "2.4"
 
 val AIRFRAME_BINARY_COMPAT_VERSION = "23.6.0"
@@ -946,7 +946,7 @@ lazy val benchmark =
         "org.openjdk.jmh" % "jmh-generator-reflection" % JMH_VERSION,
         // Used only for json benchmark
         "org.json4s" %% "json4s-jackson" % "4.0.7",
-        "io.circe"   %% "circe-parser"   % "0.14.10",
+        "io.circe"   %% "circe-parser"   % "0.14.12",
         // For ScalaPB
         // "com.thesamet.scalapb" %% "scalapb-runtime-grpc" % scalapb.compiler.Version.scalapbVersion
         // For grpc-java
@@ -990,7 +990,7 @@ def sqlRefLib = { scalaVersion: String =>
       // Include Spark just as a reference implementation
       "org.apache.spark" %% "spark-sql" % "3.5.5" % Test,
       // Include Trino as a reference implementation
-      "io.trino" % "trino-main" % "472" % Test
+      "io.trino" % "trino-main" % "473" % Test
     )
   } else {
     Seq.empty
